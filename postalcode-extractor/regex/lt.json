@@ -1,6 +1,6 @@
 {
 	"country": "LT",
-	"comment": "Lithuanian postcode is in the form `LT-XXXXX`, and must have the `LV-` to be valid",
+	"comment": "Lithuanian postcode is in the form `LT-XXXXX`, and must have the `LT-` to be valid",
 	"priority": 100,
 	"regex": {
 		"engines": {
