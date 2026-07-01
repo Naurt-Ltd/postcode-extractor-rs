@@ -1,0 +1,29 @@
+{
+    "country": "BA",
+    "tests": {
+        "position_check": {
+            "matches": [
+                {
+                    "address": "Danijela Ozme 4, 71000 Centar Sarajevo, Bosna i Hercegovina",
+                    "postcode": "71000"
+                }
+            ],
+            "no_match": [
+                "71000 Danijela Ozme 4, Centar Sarajevo, Bosna i Hercegovina"
+            ]
+        },
+        "no_position_check": {
+            "matches": [
+                {
+                    "original": "01234",
+                    "postcode": "01234"
+                }
+            ],
+            "no_match": [
+                "123456",
+                "1234",
+                "ABCDE"
+            ]
+        }
+    }
+}

@@ -16,6 +16,7 @@ pub static FOUR_DIGIT_NATIONS: &[Country] = &[
 	Country::SI,
 	Country::ZA,
 	Country::BH,
+	Country::BG,
 ];
 
 /// Countries which use five digits in the postcode, e.g. `12345`
@@ -39,6 +40,8 @@ pub static FIVE_DIGIT_NATIONS: &[Country] = &[
 	Country::SA,
 	Country::AE,
 	Country::JO,
+	Country::BA,
+	Country::HR,
 ];
 
 /// Countries which use six digits in the postcode, e.g. `123456`
@@ -80,8 +83,12 @@ pub enum Country {
 	AT,
 	/// Australia
 	AU,
+	/// Bosnia and Herzegovenia
+	BA,
 	/// Belgium
 	BE,
+	/// Bulgaria
+	BG,
 	/// Bahrain
 	BH,
 	/// Brazil
@@ -114,6 +121,8 @@ pub enum Country {
 	GG,
 	/// Greece
 	GR,
+	/// Croatia
+	HR,
 	/// Hungary
 	HU,
 	/// Indonesia
@@ -203,7 +212,9 @@ impl Country {
 			Country::AE => "United Arab Emirates".to_string(),
 			Country::AT => "Austria".to_string(),
 			Country::AU => "Australia".to_string(),
+			Country::BA => "Bosnia and Herzegovina".to_string(),
 			Country::BE => "Belgium".to_string(),
+			Country::BG => "Bulgaria".to_string(),
 			Country::BH => "Bahrain".to_string(),
 			Country::BR => "Brazil".to_string(),
 			Country::CA => "Canada".to_string(),
@@ -220,6 +231,7 @@ impl Country {
 			Country::GB => "United Kingdom".to_string(),
 			Country::GG => "Guernsey".to_string(),
 			Country::GR => "Greece".to_string(),
+			Country::HR => "Croatia".to_string(),
 			Country::HU => "Hungary".to_string(),
 			Country::ID => "Indonesia".to_string(),
 			Country::IE => "Ireland".to_string(),
@@ -281,7 +293,9 @@ impl Country {
 			Country::AE => "الإمارات العربية المتحدة".to_string(),
 			Country::AT => "Österreich".to_string(),
 			Country::AU => "Australia".to_string(),
+			Country::BA => "Bosna i Hercegovina".to_string(),
 			Country::BE => "België".to_string(),
+			Country::BG => "България".to_string(),
 			Country::BH => "البحرين".to_string(),
 			Country::BR => "Brasil".to_string(),
 			Country::CA => "Canada".to_string(),
@@ -298,6 +312,7 @@ impl Country {
 			Country::GB => "United Kingdom".to_string(),
 			Country::GG => "Guernsey".to_string(),
 			Country::GR => "Ελλάδα".to_string(),
+			Country::HR => "Hrvatska".to_string(),
 			Country::HU => "Magyarország".to_string(),
 			Country::ID => "Indonesia".to_string(),
 			Country::IE => "Ireland".to_string(),

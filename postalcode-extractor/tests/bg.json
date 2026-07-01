@@ -1,0 +1,27 @@
+{
+    "country": "BG",
+    "tests": {
+        "position_check": {
+            "matches": [
+                {
+                    "address": "Булевард Витоша 19, 1000 София, България",
+                    "postcode": "1000"
+                }
+            ],
+            "no_match": [
+                "1000 Булевард Витоша 19, София, България"
+            ]
+        },
+        "no_position_check": {
+            "matches": [
+                {
+                    "original": "1234",
+                    "postcode": "1234"
+                }
+            ],
+            "no_match": [
+                "10111"
+            ]
+        }
+    }
+}

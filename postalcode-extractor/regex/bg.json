@@ -1,0 +1,15 @@
+{
+    "country": "BG",
+    "comment": "Bulgaria postcode is four digits",
+    "priority": 100,
+    "regex": {
+        "engines": {
+            "rust": "\\b(?<postcode>\\d{4})\\b"
+        },
+        "position_logic": {
+            "operation": "GT",
+            "position": 0.4,
+            "group": "last"
+        }
+    }
+}

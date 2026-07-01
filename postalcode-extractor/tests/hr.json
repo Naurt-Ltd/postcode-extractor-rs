@@ -1,0 +1,29 @@
+{
+    "country": "HR",
+    "tests": {
+        "position_check": {
+            "matches": [
+                {
+                    "address": "Vukovarska 9, 21000 Split, Hrvatska",
+                    "postcode": "21000"
+                }
+            ],
+            "no_match": [
+                "21000 Vukovarska 9, Split, Hrvatska"
+            ]
+        },
+        "no_position_check": {
+            "matches": [
+                {
+                    "original": "01234",
+                    "postcode": "01234"
+                }
+            ],
+            "no_match": [
+                "1234",
+                "123456",
+                "ABCDE"
+            ]
+        }
+    }
+}
