@@ -326,7 +326,7 @@ impl Country {
 			Country::LT => "Lithuania".to_string(),
 			Country::LU => "Luxembourg".to_string(),
 			Country::LV => "Latvia".to_string(),
-			Country::MX => "Mexico".to_string(),
+			Country::MX => "México".to_string(),
 			Country::MY => "Malaysia".to_string(),
 			Country::NL => "Nederland".to_string(),
 			Country::NO => "Norge".to_string(),
