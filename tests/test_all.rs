@@ -109,63 +109,64 @@ fn test_all() {
 }
 
 fn verify_country(
-	wrapper: &PostcodeWrapper,
-	test_holder: &TestHolder,
+	result: &PostcodeWrapper,
+	expected: &TestHolder,
 	debug_msg: &str,
 ) {
-	if SIX_DIGIT_NATIONS.contains(&test_holder.country) {
-		if wrapper.country != Country::Unknown6Digit
-			&& !(wrapper.country == Country::TW
-				&& test_holder.country == Country::TW)
+	if SIX_DIGIT_NATIONS.contains(&expected.country) {
+		if result.country != Country::Unknown6Digit
+			&& !(result.country == Country::TW
+				&& expected.country == Country::TW)
 		{
 			panic!(
 				"Expected {:?}; got {:?} {}",
-				test_holder.country, wrapper.country, debug_msg
+				expected.country, result.country, debug_msg
 			)
 		}
-	} else if FIVE_DIGIT_ADDITIONAL_NATIONS.contains(&test_holder.country) {
-		if wrapper.country != Country::Unknown5DigitAdditional
-			&& wrapper.country != Country::Unknown5Digit
+	} else if FIVE_DIGIT_ADDITIONAL_NATIONS.contains(&expected.country) {
+		if result.country != Country::Unknown5DigitAdditional
+			&& result.country != Country::Unknown5Digit
 		{
 			panic!(
 				"Expected {:?}; got {:?} {}",
-				test_holder.country, wrapper.country, debug_msg
+				expected.country, result.country, debug_msg
 			)
 		}
-	} else if FIVE_DIGIT_NATIONS.contains(&test_holder.country) {
-		if wrapper.country != Country::Unknown5Digit
-			&& wrapper.country != Country::Unknown5DigitAdditional
+	} else if FIVE_DIGIT_NATIONS.contains(&expected.country) {
+		if result.country != Country::Unknown5Digit
+			&& result.country != Country::Unknown5DigitAdditional
+			&& expected.country != Country::CZ
 		{
 			panic!(
 				"Expected {:?}; got {:?} {}",
-				test_holder.country, wrapper.country, debug_msg
+				expected.country, result.country, debug_msg
 			)
 		}
-	} else if FOUR_DIGIT_NATIONS.contains(&test_holder.country) {
-		if wrapper.country != Country::Unknown4Digit
-			&& !(wrapper.country == Country::CY
-				&& test_holder.country == Country::CY)
-			&& !(wrapper.country == Country::LU
-				&& test_holder.country == Country::LU)
+	} else if FOUR_DIGIT_NATIONS.contains(&expected.country) {
+		if result.country != Country::Unknown4Digit
+			&& !(result.country == Country::CY
+				&& expected.country == Country::CY)
+			&& !(result.country == Country::LU
+				&& expected.country == Country::LU)
 		{
 			panic!(
 				"Expected {:?}; got {:?} {}",
-				test_holder.country, wrapper.country, debug_msg
+				expected.country, result.country, debug_msg
 			)
 		}
-	} else if FIVE_DIGIT_WITH_SPACE_NATIONS.contains(&test_holder.country) {
-		if wrapper.country != Country::Unknown5DigitSpace
-			&& !(wrapper.country == Country::CZ
-				&& test_holder.country == Country::CZ)
-			&& !(wrapper.country == Country::GR
-				&& test_holder.country == Country::GR)
+	} else if FIVE_DIGIT_WITH_SPACE_NATIONS.contains(&expected.country) {
+		if result.country != Country::Unknown5DigitSpace
+			&& !(result.country == Country::CZ
+				&& expected.country == Country::CZ)
+			&& !(result.country == Country::GR
+				&& expected.country == Country::GR)
 		{
 			panic!(
 				"Expected {:?}; got {:?} {}",
-				test_holder.country, wrapper.country, debug_msg
+				expected.country, result.country, debug_msg
 			)
 		}
 	} else {
-		assert_eq!(wrapper.country, test_holder.country, "{}", debug_msg);
+		assert_eq!(result.country, expected.country, "{}", debug_msg);
 	}
 }

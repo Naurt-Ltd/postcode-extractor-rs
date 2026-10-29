@@ -10,12 +10,17 @@
 				{
 					"address": "Brněnská 2256/16 CZ-123 08 Jitrnice",
 					"postcode": "CZ-123 08"
+				},
+				{
+					"address": "Brněnská 2256/16 CZ-12308 Jitrnice",
+					"postcode": "CZ-12308"
+				},
+				{
+					"address": "Brněnská 2256/16 12308 Jitrnice",
+					"postcode": "12308"
 				}
 			],
-			"no_match": [
-				"Brněnská 2256/16 12307 Jitrnice",
-				"123 07 Brněnská 2256/16 Jitrnice"
-			]
+			"no_match": ["123 07 Brněnská 2256/16 Jitrnice"]
 		},
 		"no_position_check": {
 			"matches": [
@@ -26,11 +31,17 @@
 				{
 					"original": "CZ-123 01",
 					"postcode": "CZ-123 01"
+				},
+				{
+					"original": "12309",
+					"postcode": "12309"
+				},
+				{
+					"original": "CZ-12301",
+					"postcode": "CZ-12301"
 				}
 			],
-			"no_match": [
-				"12345"
-			]
+			"no_match": ["123456", "1234"]
 		}
 	}
 }

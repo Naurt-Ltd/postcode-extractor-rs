@@ -42,6 +42,7 @@ pub static FIVE_DIGIT_NATIONS: &[Country] = &[
 	Country::JO,
 	Country::BA,
 	Country::HR,
+	Country::CZ,
 ];
 
 /// Countries which use six digits in the postcode, e.g. `123456`

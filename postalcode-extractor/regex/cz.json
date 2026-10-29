@@ -4,7 +4,7 @@
 	"priority": 100,
 	"regex": {
 		"engines": {
-			"rust": "\\b(?<postcode>(CZ-)?\\d{3} \\d{2})\\b"
+			"rust": "\\b(?<postcode>(CZ-)?\\d{3}( )?\\d{2})\\b"
 		},
 		"position_logic": {
 			"operation": "GT",
